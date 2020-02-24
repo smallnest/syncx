@@ -11,11 +11,20 @@ provides token implementation.
 
 Only the one thats owns the `Token` can do stuff and then it can handoffs the token to others.
 
-- Accquire
-
 
 ## Batch
 
+[![License](https://img.shields.io/:license-apache%202-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![GoDoc](https://godoc.org/github.com/smallnest/syncx?status.png)](http://godoc.org/github.com/smallnest/syncx)  [![travis](https://travis-ci.org/smallnest/syncx.svg?branch=master)](https://travis-ci.org/smallnest/syncx) [![Go Report Card](https://goreportcard.com/badge/github.com/smallnest/syncx)](https://goreportcard.com/report/github.com/smallnest/syncx) [![coveralls](https://coveralls.io/repos/smallnest/syncx/badge.svg?branch=master&service=github)](https://coveralls.io/github/smallnest/syncx?branch=master) 
+
+provides batch implementation.
+
+It is like `errgroup` and can return all errors results of each task.
+
+## Any
+
+provides partial batch implementation.
+
+You can wait some tasks have finished and returns.
 
 ## Other advanced sync primitives
 
