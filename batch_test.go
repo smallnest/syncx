@@ -24,11 +24,7 @@ func TestBatch(t *testing.T) {
 		})
 	}
 
-	errCount, errs, err := batch.Wait()
-	if err != nil {
-		t.Fatalf("faile to Batch.Wait: %v", err)
-	}
-
+	errCount, errs := batch.Wait()
 	if errCount != 0 {
 		t.Fatalf("some goroutines return errors %d: %v", errCount, errs)
 	}
