@@ -17,8 +17,9 @@ func TestToken(t *testing.T) {
 
 	ctx, cancel := context.WithCancel(context.Background())
 
+	var mu sync.Mutex
 	var result string
-
+	var count int
 	for i := 0; i < 3; i++ {
 		i := i
 		id := strconv.Itoa(i)
@@ -28,12 +29,22 @@ func TestToken(t *testing.T) {
 				if err != nil {
 					return
 				}
+				mu.Lock()
 				result += id
+				mu.Unlock()
+
+				count++
+				if count == 7 {
+					wg.Done()
+					return
+				}
+
 				err = token.Handoff(ctx, (i+1)%3) // pass to the next
 				wg.Done()
 				if err != nil {
 					return
 				}
+
 			}
 		}()
 	}

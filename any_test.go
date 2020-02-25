@@ -32,7 +32,8 @@ func TestAny(t *testing.T) {
 		t.Fatalf("some goroutines return errors %d: %v", errCount, errs)
 	}
 
-	if count < 500 {
-		t.Fatalf("expected >=500 but got %d", count)
+	c := atomic.LoadUint64(&count)
+	if c < 500 {
+		t.Fatalf("expected >=500 but got %d", c)
 	}
 }
