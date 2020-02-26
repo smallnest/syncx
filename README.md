@@ -27,6 +27,13 @@ provides partial batch implementation.
 
 You can wait some tasks have finished and returns.
 
+## Examples
+
+use **syncx** to solve [leetcode concurrency problems](https://leetcode.com/problemset/concurrency/)
+
+- [1115 Print FooBar Alternately](https://leetcode.com/problems/print-foobar-alternately): [solution](https://github.com/smallnest/leetcode/tree/master/1115_print_foobar_alternately)
+- [1116 Print Zero Even Odd](https://leetcode.com/problems/print-zero-even-odd): [solution](https://github.com/smallnest/leetcode/tree/master/1116_print_zero_even_odd)
+- [1195 Fizz Buzz Multithreaded](https://leetcode.com/problems/fizz-buzz-multithreaded): [solution](https://github.com/smallnest/leetcode/tree/master/1195_fizz_buzz_multithreaded)
 ## Other advanced sync primitives
 
 - [singleflight](https://github.com/golang/sync/tree/master/singleflight): provides a duplicate function call suppression
