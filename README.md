@@ -27,6 +27,10 @@ provides partial batch implementation.
 
 You can wait some tasks have finished and returns.
 
+## Stentor
+
+provides pub-sub(observer) pattern.
+
 ## Examples
 
 use **syncx** to solve [leetcode concurrency problems](https://leetcode.com/problemset/concurrency/)
